@@ -1,5 +1,9 @@
 package prova01202501;
 
-public abstract class ListaPassagens {
+import java.util.List;
+
+public record ListaPassagens(
+List<TempoPassagem> tempos
+) {
 
 }
