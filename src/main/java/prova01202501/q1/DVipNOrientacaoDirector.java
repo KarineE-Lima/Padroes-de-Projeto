@@ -1,11 +1,13 @@
 package prova01202501.q1;
 
 import prova01202501.*;
+import prova01202501.q2.ListaPassagens;
 import prova01202501.enums.Dificuldade;
 import prova01202501.enums.Idade;
 import prova01202501.enums.Sexo;
 
-import java.util.List;
+
+import java.time.LocalDate;
 
 public class DVipNOrientacaoDirector implements OrientacaoDirector{
     @Override
@@ -32,6 +34,7 @@ public class DVipNOrientacaoDirector implements OrientacaoDirector{
 
     @Override
     public ListaPassagens buildListaPassagens(ListaPassagensBuilder builder) {
-        return builder.build();
+
+        return builder.addTempo(new TempoPassagem(new Prisma(999, new PontoGeografico(0.0, -12.99825, -38.47526)), LocalDate.now())).build();
     }
 }

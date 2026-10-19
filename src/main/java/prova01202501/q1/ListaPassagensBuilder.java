@@ -1,7 +1,7 @@
 package prova01202501.q1;
 
-import prova01202501.ListaPassagens;
 import prova01202501.TempoPassagem;
+import prova01202501.q2.ListaPassagens;
 
 import java.util.List;
 
@@ -12,6 +12,6 @@ public class ListaPassagensBuilder {
         return this;
     }
     public ListaPassagens build(){
-        return new ListaPassagens(tempos);
+        return new ListaPassagens((ListaPassagens) tempos);
     }
 }
